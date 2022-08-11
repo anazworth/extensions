@@ -1,0 +1,73 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "radarr",
+  "title": "Radarr",
+  "description": "View your upcoming Radarr movies.",
+  "icon": "logo.png",
+  "author": "anazworth",
+  "categories": [
+    "Media"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "upcomingMovies",
+      "title": "Radarr Calendar",
+      "subtitle": "Upcoming",
+      "description": "Show upcoming Radarr movies.",
+      "mode": "view"
+    },
+    {
+      "name": "allMovies",
+      "title": "Radarr Movies",
+      "subtitle": "All Movies",
+      "description": "Show all Radarr movies.",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "host",
+      "title": "Host",
+      "description": "Hostname of the Radarr server",
+      "type": "textfield",
+      "default": "localhost",
+      "required": true
+    },
+    {
+      "name": "port",
+      "title": "Port",
+      "description": "Port of the Radarr server",
+      "type": "textfield",
+      "default": "7878",
+      "required": true
+    },
+    {
+      "name": "apikey",
+      "title": "API Key",
+      "description": "API Key of the Radarr server",
+      "type": "textfield",
+      "default": "",
+      "required": true
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.38.3",
+    "node-fetch": "^3.2.10"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "ray publish"
+  }
+}
